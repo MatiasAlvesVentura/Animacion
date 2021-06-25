@@ -1,0 +1,116 @@
+body.dark section.box-scene {
+  background: #181c1f;
+}
+body.dark section.box-scene .sun-box {
+  left: 45%;
+  box-shadow: 0 0 5px 2px #fff;
+}
+body.dark section.box-scene .sun-box::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  background: #181c1f;
+  left: 38%;
+  border-radius: 50%;
+  z-index: 100;
+  top: -20px;
+}
+body section.box-scene {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(0deg, rgba(186, 224, 246, 0.9976365546) 0%, #2c95c1 84%);
+  -webkit-animation: scene 30s linear infinite;
+          animation: scene 30s linear infinite;
+}
+body section.box-scene .city {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+body section.box-scene .city img {
+  width: 100%;
+}
+body section.box-scene .car-blue {
+  max-width: 250px;
+  position: absolute;
+  bottom: 15px;
+  left: -250px;
+  -webkit-animation: carblue 15s linear infinite;
+          animation: carblue 15s linear infinite;
+}
+body section.box-scene .car-red {
+  position: absolute;
+  bottom: 2px;
+  right: -250px;
+  z-index: 1000;
+  -webkit-animation: carred 15s linear infinite;
+          animation: carred 15s linear infinite;
+}
+body section.box-scene .car-red img {
+  width: 250px;
+  height: 150px;
+}
+body section.box-scene .sun-box {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 120px;
+  border-radius: 50%;
+  left: 55%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  box-shadow: 0 0 15px 7px #fff;
+  cursor: pointer;
+}
+
+@-webkit-keyframes carblue {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
+
+@keyframes carblue {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
+@-webkit-keyframes carred {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120vw);
+  }
+}
+@keyframes carred {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120vw);
+  }
+}
+/*@keyframes scene {
+    0% {
+        transform: translateX(-1000%);
+    }
+    100% {
+        transform: translateX(1000%);
+    }
+}*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+}/*# sourceMappingURL=main.css.map */

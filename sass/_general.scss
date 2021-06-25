@@ -1,0 +1,102 @@
+@use 'colores';
+body {
+    &.dark {
+        section {
+            &.box-scene {
+                background: colores.$color_fondonoche;
+                .sun-box {
+                    left: 45%;
+                    box-shadow: 0 0 5px 2px colores.$color_sol;
+                }
+                .sun-box::before {
+                    content: "";
+                    position: absolute;
+                    width: 130px;
+                    height: 130px;
+                    background: #181c1f;
+                    left: 38%;
+                    border-radius: 50%;
+                    z-index: 100;
+                    top: -20px;
+                }
+            }
+        }
+    }
+    section {
+        &.box-scene {
+            height: 100vh;
+            position: relative;
+            width: 100%;
+            overflow-x: hidden;
+            background: colores.$color-fondo;
+            animation: scene 30s linear infinite;
+            .city {
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                img {
+                    width: 100%;
+                }
+            }
+            .car-blue {
+                max-width: 250px;
+                position: absolute;
+                bottom: 15px;
+                left: -250px;
+                animation: carblue 15s linear infinite;
+            }
+            .car-red {
+                img {
+                    width: 250px;
+                    height: 150px;
+                }
+                position: absolute;
+                bottom: 2px;
+                right: -250px;
+                z-index: 1000;
+                animation: carred 15s linear infinite;
+            }
+            .sun-box {
+                position: absolute;
+                width: 130px;
+                height: 130px;
+                top: 120px;
+                border-radius: 50%;
+                left: 55%;
+                transform: translateX(-50%);
+                background-color: colores.$color_sol;
+                box-shadow: 0 0 15px 7px colores.$color_sol;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@keyframes carblue {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX( 120vw);
+    }
+}
+
+@keyframes carred {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-120vw);
+    }
+}
+
+
+/*@keyframes scene {
+    0% {
+        transform: translateX(-1000%);
+    }
+    100% {
+        transform: translateX(1000%);
+    }
+}*/
